@@ -9,7 +9,7 @@ import "./Styles/animations.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={"/DSC106-Portfolio/"}>
       <App />
       <Toaster />
     </BrowserRouter>
