@@ -1,4 +1,4 @@
-import { FaSortAmountDownAlt } from "react-icons/fa";
+import { FaChalkboardTeacher, FaChartLine, FaCode, FaDatabase, FaJava, FaLinux, FaMoneyBillWave, FaPercent, FaRobot, FaServer, FaSortAmountDownAlt } from "react-icons/fa";
 import { LuPartyPopper } from "react-icons/lu";
 import { IoMdColorPalette, IoMdSettings } from "react-icons/io";
 import { MdDownload, MdOutlineQueryStats } from "react-icons/md";
@@ -9,8 +9,8 @@ import { BsLightningFill, BsSignMergeRightFill, BsYinYang } from "react-icons/bs
 import { FiLayout } from "react-icons/fi";
 import { RiSpeakFill } from "react-icons/ri";
 import { PiTestTubeFill } from "react-icons/pi";
-import { IoSparkles } from "react-icons/io5";
-import { SiExpress, SiMongodb, SiNumpy, SiPostman, SiSocketdotio, SiTypescript } from "react-icons/si";
+import { IoConstruct, IoSparkles } from "react-icons/io5";
+import { SiCplusplus, SiCss3, SiDatabricks, SiExpress, SiGo, SiHtml5, SiJupyter, SiMongodb, SiNumpy, SiPostman, SiPytorch, SiRobloxstudio, SiSocketdotio, SiTypescript, SiVisualstudiocode } from "react-icons/si";
 
 import yipyap from "/src/Assets/Images/Projects/YipYap/YipYap.png";
 import sortingViz from "/src/Assets/Images/Projects/SortingVisualizer/SortingVisualizer.png";
@@ -191,3 +191,96 @@ export const articles = [
     }
   },
 ];
+
+export const courses = [
+  {
+    title: "Data Structures and Algorithms: ",
+    text: "Hands-on projects in Java with stacks, queues, trees, and key algorithmic techniques.",
+    symbol: <FaCode />,
+  },
+  {
+    title: "Optimization Methods for Data Science: ",
+    text: "Covers convexity, optimization techniques, SVMs, and efficient algorithmic methods.",
+    symbol: <MdOutlineQueryStats />,
+  },
+  {
+    title: "The Application of Data Science: ",
+    text: "Covers the full data science lifecycle: algorithms, ML, stats, systems, and visualization.",
+    symbol: <SiDatabricks />,
+  },
+  {
+    title: "Introduction to Data Management: ",
+    text: "Intro to SQL, schema design, database architecture, and data-backed applications.",
+    symbol: <FaDatabase />,
+  },
+  {
+    title: "Systems for Scalable Analytics: ",
+    text: "Explore systems like Hadoop and Spark for large-scale data analysis and processing.",
+    symbol: <FaServer />,
+  },
+  {
+    title: "Introduction to Data Visualization: ",
+    text: "Covers D3, visualization principles, and interaction design for exploring data visually.",
+    symbol: <FaChartLine />,
+  },
+  {
+    title: "Probability and Statistics: ",
+    text: "Covers probability, distributions, estimation, confidence intervals, and hypothesis testing.",
+    symbol: <FaPercent />,
+  },
+  {
+    title: "Machine Learning - Learning Algorithms: ",
+    text: "Intro to supervised/unsupervised ML: k-NN, trees, boosting, clustering, and more.",
+    symbol: <FaRobot />,
+  }
+];
+
+export const experience = [
+  {
+    title: "Data Science Student Society (DS3) | Assistant Director of Infrastructure | Fall '24 - Present: ",
+    text: "Leading a team to redesign, program, and deploy a new website for DS3, along with a consulting division website. Improved team productivity through the Agile methodology, streamlining development workflows.",
+    symbol: <IoConstruct />,
+  },
+  {
+    title: "San Diego Taxpayer's Association | Data Science Intern | Oct '24 - Jan '25: ",
+    text: "Implemented a social media web scraper to gather data to perform sentiment analysis on current county policies. This is to make a public tool for SD Taxpayers and policymakers to see sentiments towards certain policies.",
+    symbol: <FaMoneyBillWave />,
+  },
+  {
+    title: "Mathnasium | Learning Instructor | July '22 - June '24: ",
+    text: "Instructed over 50 students of ages 5-18 using customized curriculums while consistently assessing mastery of previous topics, resulting in over 90% of students seeing improvements in test scores and improvement in their math skills.",
+    symbol: <FaChalkboardTeacher />,
+  }
+]
+
+export const skills = {
+  "Languages": {
+    "Python": <FaPython />,
+    "TypeScript": <SiTypescript />,
+    "SQL": <FaDatabase />,
+    "Java": <FaJava />,
+    "C++": <SiCplusplus />,
+    "Go": <SiGo />,
+    "HTML": <SiHtml5 />,
+    "CSS": <SiCss3 />,
+  },
+  "Developer Tools": {
+    "VSCode": <SiVisualstudiocode />,
+    "Postman": <SiPostman />,
+    "Jupyter": <SiJupyter />,
+    "Git": <BsSignMergeRightFill />,
+    "MongoDB": <SiMongodb />,
+    "Figma": <FaFigma />,
+    "Roblox Studio": <SiRobloxstudio />,
+  },
+  "Technologies/Frameworks": {
+    "React": <FaReact />,
+    "NodeJS": <FaNodeJs />,
+    "Express": <SiExpress />,
+    "D3": <TbChartBubbleFilled />,
+    "ThreeJS": <TbBrandThreejs />,
+    "SocketIO": <SiSocketdotio />,
+    "PyTorch": <SiPytorch />,
+    "Linux": <FaLinux />,
+  },
+}

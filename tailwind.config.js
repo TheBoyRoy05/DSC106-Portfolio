@@ -15,5 +15,5 @@ export default {
       }
     }
   },
-  plugins: [require("daisyui"), fluid],
+  plugins: [require("daisyui"), fluid, require('@tailwindcss/line-clamp')],
 };

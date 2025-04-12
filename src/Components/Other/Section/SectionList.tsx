@@ -6,9 +6,10 @@ interface SectionListProps {
   }[];
   color: string;
   className?: string;
+  maxLines?: number;
 }
 
-const SectionList = ({ items, color, className }: SectionListProps) => {
+const SectionList = ({ items, color, className, maxLines }: SectionListProps) => {
   return (
     <div className={`join join-vertical rounded-2xl flex-col gap-2 ${className}`}>
       {items.map((item, index) => (
@@ -19,7 +20,14 @@ const SectionList = ({ items, color, className }: SectionListProps) => {
           >
             {item.symbol}
           </div>
-          <p className="flex-[5] ~text-sm/base">
+          <p
+            className="flex-[5] text-sm overflow-hidden text-ellipsis display-webkit-box"
+            style={{
+              WebkitLineClamp: maxLines,
+              WebkitBoxOrient: "vertical",
+              display: "-webkit-box",
+            }}
+          >
             <span className="text-white text-shadow">{item.title}</span> {item.text}
           </p>
         </div>
