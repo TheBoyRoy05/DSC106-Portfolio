@@ -7,8 +7,13 @@ import ContactMePage from "./Components/Contact/ContactMePage"
 import YipYapPage from "./Components/Projects/YipYapPage"
 import SortingVizPage from "./Components/Projects/SortingVizPage"
 import ResumePage from "./Components/Other/ResumePage.tsx"
+import { useEffect } from "react"
 
 function App() {
+  useEffect(() => {
+    console.log("IT'S ALIVE!");
+  }, []);
+  
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
