@@ -7,7 +7,7 @@ import LastUpdated from "./LastUpdate";
 const Footer = () => {
   const navigate = useNavigate();
   const btnClass =
-    "btn rounded-full text-white text-lg w-12 p-0 border-none bg-[#202020] hover:bg-[#282828] glow";
+    "btn rounded-full text-white text-lg w-12 p-0 border-none bg-[#181818] dark:bg-[#202020] hover:bg-[#282828] glow";
 
   const handleMail = (e: { preventDefault: () => void }) => {
     e.preventDefault();
@@ -16,11 +16,11 @@ const Footer = () => {
   };
 
   return (
-    <div className="border-t border-[--border-color] bg-[#181818] py-8 flex flex-col md:flex-row items-center md:items-start gap-y-8 md:gap-y-0 md:gap-x-8">
+    <footer className="border-t border-[--border-color] bg-[#fff] dark:bg-[#181818] py-8 flex flex-col md:flex-row items-center md:items-start gap-y-8 md:gap-y-0 md:gap-x-8">
       {/* Logo and Copyright */}
       <div className="flex flex-col items-center flex-1 gap-3 text-center">
         <div className="text-[2.5rem] md:text-[3rem] font-bold">
-          <span className="text-white">{"Issac "}</span>
+          <span className="text-black dark:text-white">{"Issac "}</span>
           <span className="text-[--hero-text]">{"Roy"}</span>
         </div>
         <div className="flex flex-col gap-1 text-sm font-medium text-white">
@@ -35,12 +35,12 @@ const Footer = () => {
         className="w-full flex justify-center items-center gap-8 px-4 py-4 border-y md:border-y-0 md:border-x border-[--border-color] flex-1 text-center"
       >
         <div className="flex flex-col gap-y-2">
-          <h4 className="text-lg font-bold text-white mb-2">{"Info"}</h4>
+          <h4 className="text-lg font-bold text-black dark:text-white mb-2">{"Info"}</h4>
           <a href="/about-me" className="hover:underline">About</a>
           <a href="/contact-me" className="hover:underline">Contact</a>
         </div>
         <div className="flex flex-col gap-y-2">
-          <h4 className="text-lg font-bold text-white mb-2">{"Work"}</h4>
+          <h4 className="text-lg font-bold text-black dark:text-white mb-2">{"Work"}</h4>
           <a href="/projects" className="hover:underline">Projects</a>
           <a href="/blog" className="hover:underline">Blog</a>
         </div>
@@ -51,7 +51,7 @@ const Footer = () => {
         id="social-media-links"
         className="flex flex-col items-center flex-1 gap-y-4 md:mt-0"
       >
-        <h4 className="text-lg font-bold text-white">{"Social Links"}</h4>
+        <h4 className="text-lg font-bold text-black dark:text-white">{"Social Links"}</h4>
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <button onClick={handleMail} className={btnClass} title="gmail">
             <SiGmail />
@@ -79,7 +79,7 @@ const Footer = () => {
           </button>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

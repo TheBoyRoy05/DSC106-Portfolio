@@ -20,7 +20,7 @@ const AboutMeItem = ({ title, image, text, flip = false }: ItemProps) => {
       <div className={`flex-col justify-center items-center gap-5 w-full flex-1`}>
         <h4 className="~text-base/xl text-gray-100 text-shadow font-bold">{title}</h4>
         <p
-          className="text-gray-400 ~text-sm/lg font-light ~leading-7/8 indent-6"
+          className="~text-sm/lg font-light ~leading-7/8 indent-6"
           style={{ width: "clamp(300px, 50vw, 600px)" }}
         >
           {text}

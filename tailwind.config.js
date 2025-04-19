@@ -2,6 +2,7 @@
 import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
 
 export default {
+  darkMode: 'selector',
   content: {
     files: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
     extract

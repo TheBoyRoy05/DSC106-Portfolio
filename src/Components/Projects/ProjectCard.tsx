@@ -26,7 +26,7 @@ const ProjectCard = ({ name, time, description, image, link, props }: ProjectPro
             <h3 className="~mb-2/4 text-shadow">{name}</h3>
             <FaArrowRight />
           </div>
-          <p className="~text-xs/base font-bold mb-[3vw]">
+          <p className="text-white ~text-xs/base font-bold mb-[3vw]">
             <span className="text-white">{time}</span>
             {` — ${description}`}
           </p>

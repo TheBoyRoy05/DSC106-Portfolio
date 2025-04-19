@@ -18,6 +18,8 @@ const HomePage = () => {
     setTimeout(() => {
       setLoading(false);
     }, 1000);
+
+    document.documentElement.classList.add("dark");
   }, []);
 
   const handleClick = () => {

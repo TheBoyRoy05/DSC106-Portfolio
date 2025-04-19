@@ -27,7 +27,7 @@ const ContactMePage = () => {
         <ContactForm />
         <div className="border-r border-[--border-color] md:-mb-8 ~mx-4/16" />
         <div className="flex-col items-center gap-10">
-          <h3 className="text-white text-shadow ~text-2xl/4xl font-bold">Socials</h3>
+          <h3 className="text-black dark:text-white text-shadow ~text-2xl/4xl font-bold">Socials</h3>
           <div className="flex-col gap-6">
             <button onClick={handleMail} className={btnClass}>
               <SiGmail />

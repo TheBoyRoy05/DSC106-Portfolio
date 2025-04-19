@@ -1,10 +1,12 @@
 import { FaHome, FaBars, FaTimes } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import clsx from "clsx";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
   const pages = {
@@ -16,12 +18,12 @@ const Navbar = () => {
   };
 
   const btnClass =
-    "btn mt-2 lg:mt-0 lg:ml-4 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-none shadow-lg text-gray-200 text-shadow hover:bg-gray-500 hover:bg-opacity-30";
+    "btn mt-2 lg:mt-0 lg:ml-4 bg-gray-600/10 dark:bg-gray-400/10 bg-clip-padding backdrop-filter backdrop-blur-sm border-none shadow-lg text-gray-700 dark:text-gray-200 text-shadow hover:bg-gray-500/30";
 
   return (
     <nav className="fixed top-0 left-0 w-full z-20 bg-transparent flex items-center justify-between p-4">
       <button className="text-[2rem] font-bold ml-2" onClick={() => navigate("/")}>
-        <span className="text-gray-200">{"Issac "}</span>
+        <span className="text-gray-700 dark:text-gray-200">{"Issac "}</span>
         <span className="text-[--hero-text]">{"Roy"}</span>
       </button>
 
@@ -32,10 +34,15 @@ const Navbar = () => {
           {"Home"}
         </button>
         {Object.entries(pages).map(([name, path], index) => (
-          <button key={index} className={btnClass} onClick={() => navigate(path)}>
+          <button
+            key={index}
+            className={btnClass + (location.pathname === path ? " bg-gray-500/60 glow" : "")}
+            onClick={() => navigate(path)}
+          >
             {name}
           </button>
         ))}
+        {location.pathname !== "/" && <ThemeToggle />}
       </div>
 
       {/* Mobile Menu Button */}

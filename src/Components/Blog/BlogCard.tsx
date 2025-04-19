@@ -30,7 +30,7 @@ const BlogCard = ({ title, time, description, image, link, tech }: BlogProps) =>
             <span className="text-white">{title}</span>
             <span className="text-white">{time}</span>
           </div>
-          <p className="~text-xs/base font-light indent-8 ~leading-5/7">{description}</p>
+          <p className="~text-xs/base font-light indent-8 ~leading-5/7 text-gray-400">{description}</p>
 
           <div className="flex-1 flex items-end">
             <div className="flex items-center justify-between w-full">

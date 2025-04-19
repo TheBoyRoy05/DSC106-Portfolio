@@ -36,7 +36,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit} className="w-full max-w-md px-4">
       <div className="flex flex-col gap-6 w-full">
-        <h3 className="text-white text-shadow ~text-2xl/4xl font-bold text-center">
+        <h3 className="text-black dark:text-white text-shadow ~text-2xl/4xl font-bold text-center">
           Let's Connect
         </h3>
 

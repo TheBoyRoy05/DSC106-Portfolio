@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --cursor-color: white;
   --border-color: #505050;
@@ -19,7 +21,7 @@ body {
 }
 
 h1, h2, h4, p, a, span {
-  @apply text-gray-400
+  @apply text-black dark:text-gray-400
 }
 
 p, a {
@@ -27,7 +29,7 @@ p, a {
 }
 
 h2 {
-  @apply text-white text-center hero-text-shadow mt-10 mb-10 ~text-3xl/7xl px-8;
+  @apply text-black dark:text-white text-center hero-text-shadow mt-10 mb-10 ~text-3xl/7xl px-8;
 }
 
 .input, .textarea {

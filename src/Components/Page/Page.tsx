@@ -16,7 +16,7 @@ const Page = ({ children, contents, color }: PageProps) => {
   } as React.CSSProperties;
 
   return (
-    <SimpleBar className={`absolute left-0 top-0 w-screen h-screen overflow-x-hidden bg-[#101010]`}>
+    <SimpleBar className={`absolute left-0 top-0 w-screen h-screen overflow-x-hidden bg-[#f5f5f5] dark:bg-[#101010]`}>
       <div className={`page-bg ${color ? "with-gradient" : ""}`} style={pageStyle}>
         <Navbar />
         {contents && <TableOfContents contents={contents} />}

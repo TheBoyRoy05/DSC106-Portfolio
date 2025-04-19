@@ -85,7 +85,7 @@ const ResumePage = () => {
                 <SectionHeader text={category} style="~text-xl/2xl" nolight />
                 <div className="flex gap-2">
                   {Object.entries(skills).map(([name, item], index) => (
-                    <span key={index} className="text-white ~text-lg/3xl" title={name}>
+                    <span key={index} className="text-black dark:text-white ~text-lg/3xl" title={name}>
                       {item}
                     </span>
                   ))}

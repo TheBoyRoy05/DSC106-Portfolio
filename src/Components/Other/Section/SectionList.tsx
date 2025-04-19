@@ -21,7 +21,7 @@ const SectionList = ({ items, color, className, maxLines }: SectionListProps) =>
             {item.symbol}
           </div>
           <p
-            className="flex-[5] text-sm overflow-hidden text-ellipsis display-webkit-box"
+            className="flex-[5] text-sm overflow-hidden text-ellipsis display-webkit-box text-gray-400"
             style={{
               WebkitLineClamp: maxLines,
               WebkitBoxOrient: "vertical",
