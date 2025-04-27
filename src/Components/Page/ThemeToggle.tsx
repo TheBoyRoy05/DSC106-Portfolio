@@ -23,7 +23,7 @@ const ThemeToggle = () => {
           type="radio"
           name="worktype"
           className="sr-only peer"
-          checked
+          defaultChecked
           onClick={() =>
           {
             document.documentElement.classList.toggle("dark", window.matchMedia("(prefers-color-scheme: dark)").matches);

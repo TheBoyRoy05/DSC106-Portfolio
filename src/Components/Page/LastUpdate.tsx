@@ -6,7 +6,11 @@ const LastUpdated = () => {
   // Fetch the last commit from the GitHub API
   const fetchLastCommit = async () => {
     try {
-      const response = await fetch('https://api.github.com/repos/TheBoyRoy05/TheBoyRoy05/commits');
+      const response = await fetch('https://api.github.com/repos/TheBoyRoy05/TheBoyRoy05/commits', {
+        headers: {
+          Authorization: `token ${import.meta.env.VITE_GITHUB_TOKEN}`,
+        },
+      });
       const data = await response.json();
 
       if (data.length > 0) {

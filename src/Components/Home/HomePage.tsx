@@ -36,7 +36,7 @@ const HomePage = () => {
         <Arrow handleClick={handleClick} />
         <div className="mt-[9vh] h-64 fade-gradient" />
         <div className="bg-[#101010] py-[7vh]" ref={mainPage}>
-          <Projects upTo={2} />
+          <Projects upTo={3} />
           <Blog upTo={3} />
         </div>
         <Footer />

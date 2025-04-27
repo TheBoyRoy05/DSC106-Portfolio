@@ -6,8 +6,8 @@ interface ProjectProps {
   name: string;
   time: string;
   description: string;
-  image: string;
-  link: string;
+  image?: string;
+  link?: string;
   props?: any;
 }
 
@@ -18,8 +18,8 @@ const ProjectCard = ({ name, time, description, image, link, props }: ProjectPro
     <Frame midClass="w-[clamp(350px,72.5vw,1500px)]" {...props}>
       <div className="glare w-1/3" />
       <div
-        className={`~pt-2/6 ~px-2/6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
-        onClick={() => navigate(link)}
+        className={`w-full ~pt-2/6 ~px-2/6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
+        onClick={link ? () => navigate(link) : undefined}
       >
         <div className="frame-content flex-col overflow-hidden">
           <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
@@ -30,11 +30,14 @@ const ProjectCard = ({ name, time, description, image, link, props }: ProjectPro
             <span className="text-white">{time}</span>
             {` — ${description}`}
           </p>
-          <img
-            src={image}
-            alt={name}
-            className="border border-slate-500 rounded-xl group-hover:mt-[-0.5vw] ~-mb-2/8 transition-all duration-300"
-          />
+
+          <div className="skeleton w-full aspect-video rounded-xl group-hover:-translate-y-4 ~-mb-2/8 transition-all duration-300">
+            <img
+              src={image}
+              className="border border-slate-500 rounded-xl size-full"
+              onError={(e) => (e.currentTarget.style.display = "none")}
+            />
+          </div>
         </div>
       </div>
     </Frame>

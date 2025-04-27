@@ -62,7 +62,7 @@ const YipYapPage = () => {
             <div className="flex justify-between">
               <SectionHeader text={"Overview"} style={"~text-base/xl"} />
               <div className="flex ~gap-1/4 items-center mr-4">
-                {Object.entries(yipyap.tech).map(([name, item], index) => (
+                {Object.entries(yipyap.tech!).map(([name, item], index) => (
                   <span key={index} className="text-white ~text-lg/3xl" title={name}>
                     {item}
                   </span>

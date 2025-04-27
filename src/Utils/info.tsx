@@ -1,8 +1,27 @@
-import { FaChalkboardTeacher, FaChartLine, FaCode, FaDatabase, FaJava, FaLinux, FaMoneyBillWave, FaPercent, FaRobot, FaServer, FaSortAmountDownAlt } from "react-icons/fa";
+import {
+  FaChalkboardTeacher,
+  FaChartLine,
+  FaCode,
+  FaDatabase,
+  FaJava,
+  FaLinux,
+  FaMoneyBillWave,
+  FaPercent,
+  FaRobot,
+  FaServer,
+  FaSortAmountDownAlt,
+} from "react-icons/fa";
 import { LuPartyPopper } from "react-icons/lu";
 import { IoMdColorPalette, IoMdSettings } from "react-icons/io";
 import { MdDownload, MdOutlineQueryStats } from "react-icons/md";
-import { FaFigma, FaLocationCrosshairs, FaLock, FaNodeJs, FaPython, FaReact } from "react-icons/fa6";
+import {
+  FaFigma,
+  FaLocationCrosshairs,
+  FaLock,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa6";
 import { TbBrandThreejs, TbChartBubbleFilled } from "react-icons/tb";
 import { GiClown, GiCoinsPile, GiFamilyTree } from "react-icons/gi";
 import { BsLightningFill, BsSignMergeRightFill, BsYinYang } from "react-icons/bs";
@@ -10,7 +29,23 @@ import { FiLayout } from "react-icons/fi";
 import { RiSpeakFill } from "react-icons/ri";
 import { PiTestTubeFill } from "react-icons/pi";
 import { IoConstruct, IoSparkles } from "react-icons/io5";
-import { SiCplusplus, SiCss3, SiDatabricks, SiExpress, SiGo, SiHtml5, SiJupyter, SiMongodb, SiNumpy, SiPostman, SiPytorch, SiRobloxstudio, SiSocketdotio, SiTypescript, SiVisualstudiocode } from "react-icons/si";
+import {
+  SiCplusplus,
+  SiCss3,
+  SiDatabricks,
+  SiExpress,
+  SiGo,
+  SiHtml5,
+  SiJupyter,
+  SiMongodb,
+  SiNumpy,
+  SiPostman,
+  SiPytorch,
+  SiRobloxstudio,
+  SiSocketdotio,
+  SiTypescript,
+  SiVisualstudiocode,
+} from "react-icons/si";
 
 import yipyap from "/src/Assets/Images/Projects/YipYap/YipYap.png";
 import sortingViz from "/src/Assets/Images/Projects/SortingVisualizer/SortingVisualizer.png";
@@ -20,61 +55,121 @@ import altruism from "/src/Assets/Images/Blog/Altruism.png";
 
 export const projects = [
   {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
+    name: "Lorem Ipsum",
+    time: "2025",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "",
+  },
+  {
     name: "YipYap",
     time: "Summer '24",
     description: "The Chat App for Yappers",
     image: yipyap,
     link: "/yipyap",
     tech: {
-      "React": <FaReact />,
-      "TypeScript": <SiTypescript />,
-      "MongoDB": <SiMongodb />,
-      "Express": <SiExpress />,
-      "Node": <FaNodeJs />,
-      "Figma": <FaFigma />,
-      "Postman": <SiPostman />,
-      "SocketIO": <SiSocketdotio />,
+      React: <FaReact />,
+      TypeScript: <SiTypescript />,
+      MongoDB: <SiMongodb />,
+      Express: <SiExpress />,
+      Node: <FaNodeJs />,
+      Figma: <FaFigma />,
+      Postman: <SiPostman />,
+      SocketIO: <SiSocketdotio />,
     },
     design: [
       {
-        title: "User Experience is key -",
+        title: "User Experience is key - ",
         text: "A clean and simple UI that is easy to navigate and understand.",
         symbol: <FiLayout />,
       },
       {
-        title: "Blending tradition with innovation -",
+        title: "Blending tradition with innovation - ",
         text: "Preserving tried and true features from other chat apps while introducing new and exciting ones.",
         symbol: <BsYinYang />,
       },
       {
-        title: "What Yappers need -",
+        title: "What Yappers need - ",
         text: "Prioritizing features that allow for maximum user engagement, including AI suggestions to keep conversations flowing.",
         symbol: <RiSpeakFill />,
       },
       {
-        title: "Future color themes -",
+        title: "Future color themes - ",
         text: "Designing in grayscale for flexibility in future color themes.",
         symbol: <IoMdColorPalette />,
       },
     ],
     api: [
       {
-        title: "Security -",
+        title: "Security - ",
         text: "Industry practices like password hashing, user authentication middleware, and session management ensures a secure experience.",
         symbol: <FaLock />,
       },
       {
-        title: "Testing -",
+        title: "Testing - ",
         text: "Frequent testing using Postman ensures a stable and reliable API, ensuring minimal downtime and maximized functionality.",
         symbol: <PiTestTubeFill />,
       },
       {
-        title: "AI Suggestions -",
+        title: "AI Suggestions - ",
         text: "Using Mintral AI's API with custom prompting to generate text suggestions keeps conversations flowing.",
         symbol: <IoSparkles />,
       },
       {
-        title: "Visualizing the API -",
+        title: "Visualizing the API - ",
         text: "Tableau allows us to visualize the current YipYap API endpoints in use. As YipYap grows, so will this graph.",
         symbol: <GiFamilyTree className="rotate-180 text-3xl" />,
       },
@@ -87,8 +182,8 @@ export const projects = [
     image: sortingViz,
     link: "/sorting-visualizer",
     tech: {
-      "React": <FaReact />,
-      "TypeScript": <SiTypescript />,
+      React: <FaReact />,
+      TypeScript: <SiTypescript />,
     },
     priorities: [
       {
@@ -161,10 +256,10 @@ export const articles = [
     image: boids,
     link: "https://medium.com/@issacroy05/boids-simulating-flocks-e11c121a35cc",
     tech: {
-      "React": <FaReact />,
-      "TypeScript": <SiTypescript />,
-      "ThreeJS": <TbBrandThreejs />,
-    }
+      React: <FaReact />,
+      TypeScript: <SiTypescript />,
+      ThreeJS: <TbBrandThreejs />,
+    },
   },
   {
     title: "Wave Simulation",
@@ -174,9 +269,9 @@ export const articles = [
     image: wave,
     link: "https://medium.com/@issacroy05/a-simple-wave-simulation-35bee02c172b",
     tech: {
-      "Python": <FaPython />,
-      "Numpy": <SiNumpy />,
-    }
+      Python: <FaPython />,
+      Numpy: <SiNumpy />,
+    },
   },
   {
     title: "Altruism",
@@ -186,9 +281,9 @@ export const articles = [
     image: altruism,
     link: "https://medium.com/cognitive-neuroeconomics/decoding-altruism-ccd72547d20e",
     tech: {
-      "Python": <FaPython />,
-      "Numpy": <SiNumpy />,
-    }
+      Python: <FaPython />,
+      Numpy: <SiNumpy />,
+    },
   },
 ];
 
@@ -232,12 +327,13 @@ export const courses = [
     title: "Machine Learning - Learning Algorithms: ",
     text: "Intro to supervised/unsupervised ML: k-NN, trees, boosting, clustering, and more.",
     symbol: <FaRobot />,
-  }
+  },
 ];
 
 export const experience = [
   {
-    title: "Data Science Student Society (DS3) | Assistant Director of Infrastructure | Fall '24 - Present: ",
+    title:
+      "Data Science Student Society (DS3) | Assistant Director of Infrastructure | Fall '24 - Present: ",
     text: "Leading a team to redesign, program, and deploy a new website for DS3, along with a consulting division website. Improved team productivity through the Agile methodology, streamlining development workflows.",
     symbol: <IoConstruct />,
   },
@@ -250,37 +346,37 @@ export const experience = [
     title: "Mathnasium | Learning Instructor | July '22 - June '24: ",
     text: "Instructed over 50 students of ages 5-18 using customized curriculums while consistently assessing mastery of previous topics, resulting in over 90% of students seeing improvements in test scores and improvement in their math skills.",
     symbol: <FaChalkboardTeacher />,
-  }
-]
+  },
+];
 
 export const skills = {
-  "Languages": {
-    "Python": <FaPython />,
-    "TypeScript": <SiTypescript />,
-    "SQL": <FaDatabase />,
-    "Java": <FaJava />,
+  Languages: {
+    Python: <FaPython />,
+    TypeScript: <SiTypescript />,
+    SQL: <FaDatabase />,
+    Java: <FaJava />,
     "C++": <SiCplusplus />,
-    "Go": <SiGo />,
-    "HTML": <SiHtml5 />,
-    "CSS": <SiCss3 />,
+    Go: <SiGo />,
+    HTML: <SiHtml5 />,
+    CSS: <SiCss3 />,
   },
   "Developer Tools": {
-    "VSCode": <SiVisualstudiocode />,
-    "Postman": <SiPostman />,
-    "Jupyter": <SiJupyter />,
-    "Git": <BsSignMergeRightFill />,
-    "MongoDB": <SiMongodb />,
-    "Figma": <FaFigma />,
+    VSCode: <SiVisualstudiocode />,
+    Postman: <SiPostman />,
+    Jupyter: <SiJupyter />,
+    Git: <BsSignMergeRightFill />,
+    MongoDB: <SiMongodb />,
+    Figma: <FaFigma />,
     "Roblox Studio": <SiRobloxstudio />,
   },
   "Technologies/Frameworks": {
-    "React": <FaReact />,
-    "NodeJS": <FaNodeJs />,
-    "Express": <SiExpress />,
-    "D3": <TbChartBubbleFilled />,
-    "ThreeJS": <TbBrandThreejs />,
-    "SocketIO": <SiSocketdotio />,
-    "PyTorch": <SiPytorch />,
-    "Linux": <FaLinux />,
+    React: <FaReact />,
+    NodeJS: <FaNodeJs />,
+    Express: <SiExpress />,
+    D3: <TbChartBubbleFilled />,
+    ThreeJS: <TbBrandThreejs />,
+    SocketIO: <SiSocketdotio />,
+    PyTorch: <SiPytorch />,
+    Linux: <FaLinux />,
   },
-}
+};

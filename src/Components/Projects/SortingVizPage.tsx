@@ -55,7 +55,7 @@ const SortingVizPage = () => {
             <div className="flex justify-between">
               <SectionHeader text={"Overview"} style={"~text-base/xl"} />
               <div className="flex ~gap-1/4 items-center mr-4">
-                {Object.entries(project.tech).map(([name, item], index) => (
+                {Object.entries(project.tech!).map(([name, item], index) => (
                   <span key={index} className="text-white text-3xl" title={name}>
                     {item}
                   </span>
