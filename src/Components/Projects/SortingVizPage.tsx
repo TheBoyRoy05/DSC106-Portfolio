@@ -33,7 +33,7 @@ const SortingVizPage = () => {
           Sorting <span className="text-gradient font-medium">Visualizer</span>
         </h2>
         <h4 className="font-bold mt-[-1.5rem] ~text-base/xl text-center px-8">
-          <span className="text-white">{project.time}</span>
+          <span className="text-white">{project.year}</span>
           {` — ${project.description}`}
         </h4>
       </div>

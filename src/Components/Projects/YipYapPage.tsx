@@ -40,7 +40,7 @@ const YipYapPage = () => {
           Yip<span className="text-gradient font-medium">Yap</span>
         </h2>
         <h4 className="font-bold mt-[-1.5rem] ~text-base/xl text-center px-8">
-          <span className="text-white">{yipyap.time}</span>
+          <span className="text-white">{yipyap.year}</span>
           {` — ${yipyap.description}`}
         </h4>
       </div>

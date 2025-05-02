@@ -55,68 +55,78 @@ import altruism from "/src/Assets/Images/Blog/Altruism.png";
 
 export const projects = [
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Project Aether",
+    year: 2021,
+    description:
+      "Lorem ipsum dolor sit amet, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Neural Nexus",
+    year: 2022,
+    description:
+      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Quantum Flux",
+    year: 2023,
+    description:
+      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Echo Grid",
+    year: 2021,
+    description:
+      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Synthwave Engine",
+    year: 2022,
+    description:
+      "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Nova Protocol",
+    year: 2024,
+    description:
+      "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Orbital Mesh",
+    year: 2023,
+    description:
+      "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Helix Compiler",
+    year: 2025,
+    description:
+      "Magni dolores eos qui ratione voluptatem sequi nesciunt, neque porro quisquam est qui dolorem.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Spectral Core",
+    year: 2022,
+    description:
+      "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae.",
     image: "",
   },
   {
-    name: "Lorem Ipsum",
-    time: "2025",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    name: "Atlas Framework",
+    year: 2024,
+    description:
+      "Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto.",
     image: "",
   },
   {
     name: "YipYap",
-    time: "Summer '24",
+    year: 2024,
     description: "The Chat App for Yappers",
     image: yipyap,
     link: "/yipyap",
@@ -177,7 +187,7 @@ export const projects = [
   },
   {
     name: "Sorting Visualizer",
-    time: "Summer '24",
+    year: 2024,
     description: "Visualize your favorite sorting algorithms",
     image: sortingViz,
     link: "/sorting-visualizer",

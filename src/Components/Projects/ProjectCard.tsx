@@ -1,17 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { FaArrowRight } from "react-icons/fa6";
 import Frame from "../Other/Frame";
 import { useNavigate } from "react-router-dom";
 
 interface ProjectProps {
   name: string;
-  time: string;
+  year: number;
   description: string;
   image?: string;
   link?: string;
   props?: any;
 }
 
-const ProjectCard = ({ name, time, description, image, link, props }: ProjectProps) => {
+const ProjectCard = ({ name, year, description, image, link, props }: ProjectProps) => {
   const navigate = useNavigate();
 
   return (
@@ -27,7 +28,7 @@ const ProjectCard = ({ name, time, description, image, link, props }: ProjectPro
             <FaArrowRight />
           </div>
           <p className="text-white ~text-xs/base font-bold mb-[3vw]">
-            <span className="text-white">{time}</span>
+            <span className="text-white">{year}</span>
             {` — ${description}`}
           </p>
 
@@ -36,6 +37,7 @@ const ProjectCard = ({ name, time, description, image, link, props }: ProjectPro
               src={image}
               className="border border-slate-500 rounded-xl size-full"
               onError={(e) => (e.currentTarget.style.display = "none")}
+              onLoad={(e) => (e.currentTarget.style.display = "block")}
             />
           </div>
         </div>
