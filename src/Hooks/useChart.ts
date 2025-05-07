@@ -16,14 +16,15 @@ type BrushData = {
   percent: number;
 };
 
-export function useChart(data: Point[], width = 1000, height = 600) {
+export function useChart(points: Point[], width = 1000, height = 600) {
   const ref = useRef<SVGSVGElement>(null);
+  const [numSelected, setNumSelected] = useState(0);
   const [brushData, setBrushData] = useState<BrushData[]>([]);
 
   useEffect(() => {
     const margin = { top: 10, right: 10, bottom: 30, left: 40 };
 
-    const [minValue, maxValue] = d3.extent(data, (d) => d.totalLines);
+    const [minValue, maxValue] = d3.extent(points, (d) => d.totalLines);
     const rScale = d3
       .scaleSqrt()
       .domain([minValue ?? 0, maxValue ?? 0])
@@ -46,7 +47,7 @@ export function useChart(data: Point[], width = 1000, height = 600) {
 
     const xScale = d3
       .scaleTime()
-      .domain(d3.extent(data, (d) => d.datetime) as [Date, Date])
+      .domain(d3.extent(points, (d) => d.datetime) as [Date, Date])
       .range([usableArea.left, usableArea.right])
       .nice();
 
@@ -81,7 +82,7 @@ export function useChart(data: Point[], width = 1000, height = 600) {
 
     dots
       .selectAll("circle")
-      .data(data)
+      .data(points)
       .join("circle")
       .attr("cx", (d) => xScale(d.datetime))
       .attr("cy", (d) => yScale(d.hourFrac))
@@ -103,6 +104,7 @@ export function useChart(data: Point[], width = 1000, height = 600) {
           .style("left", `${event.clientX + 10}px`)
           .style("top", `${event.clientY + 10}px`);
       })
+      .on("mousemove", (event) => tooltip.style("left", `${event.clientX + 10}px`).style("top", `${event.clientY + 10}px`))
       .on("mouseleave", () => {
         d3.selectAll("circle").style("fill-opacity", 0.7);
         tooltip.transition().duration(200).style("opacity", 0);
@@ -114,7 +116,8 @@ export function useChart(data: Point[], width = 1000, height = 600) {
         setBrushData([]);
         return;
       }
-      const selected = data.filter((d) => isSelected(selection, d));
+      const selected = points.filter((d) => isSelected(selection, d));
+      setNumSelected(selected.length);
       const lines = selected.flatMap((d) => d.lines);
       const breakdown = d3.rollup(
         lines,
@@ -147,7 +150,7 @@ export function useChart(data: Point[], width = 1000, height = 600) {
     svg.append("g").attr("transform", `translate(0, ${usableArea.bottom})`).call(xAxis);
 
     svg.append("g").attr("transform", `translate(${usableArea.left}, 0)`).call(yAxis);
-  }, [data]);
+  }, [points]);
 
-  return { ref, brushData };
+  return { ref, brushData, numSelected };
 }

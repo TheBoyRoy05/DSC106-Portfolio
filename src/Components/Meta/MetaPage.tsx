@@ -7,9 +7,16 @@ import { useChart } from "../../Hooks/useChart";
 const MetaPage = () => {
   const statsRef = useRef<HTMLDivElement>(null);
   const commitChartRef = useRef<HTMLDivElement>(null);
+
   const { stats, commits } = useMeta();
   const sortedCommits = commits.sort((a, b) => b.totalLines - a.totalLines);
-  const { ref: chartRef, brushData } = useChart(sortedCommits);
+  const { ref: chartRef, brushData, numSelected } = useChart(sortedCommits);
+
+  const languages: { [key: string]: string } = {
+    ts: "TypeScript",
+    tsx: "React TS",
+    css: "CSS",
+  };
 
   const contents = {
     Stats: statsRef,
@@ -35,13 +42,17 @@ const MetaPage = () => {
         </div>
 
         <div id="commit-chart" ref={commitChartRef} className="flex-col gap-12 mt-20">
-          <SectionHeader text="Commit Chart" style="~text-2xl/4xl" />
+          <SectionHeader text="Commits by Time of Day" style="~text-2xl/4xl" />
           <svg ref={chartRef} />
+          <SectionHeader
+            text={`${numSelected} ${numSelected === 1 ? "Commit" : "Commits"} Selected`}
+            style="~text-xl/2xl"
+          />
           <div className="flex flex-col md:flex-row justify-around gap-10">
             {brushData.length ? (
               brushData.map(({ language, count, percent }, index) => (
                 <div className="flex flex-col gap-4" key={index}>
-                  <SectionHeader text={language.toUpperCase()} style="~text-xl/2xl" nolight />
+                  <SectionHeader text={languages[language]} style="~text-xl/2xl" nolight />
                   <span className="text-black dark:text-white ~text-xl/3xl">{`${count} lines (${percent}%)`}</span>
                 </div>
               ))
