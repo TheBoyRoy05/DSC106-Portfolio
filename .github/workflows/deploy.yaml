@@ -30,7 +30,7 @@ jobs:
       - name: Run Elocuent
         run: |
           mkdir -p public
-          npx elocuent -d . -o public/loc.csv --ext js,jsx,ts,tsx,html,css
+          npx elocuent -d . -o public/loc.csv -t js,jsx,ts,tsx,html,css
 
       - name: Commit and Push LOC report
         run: |
