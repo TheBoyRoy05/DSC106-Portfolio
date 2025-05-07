@@ -14,6 +14,7 @@ const Navbar = () => {
     Projects: "/projects",
     Blog: "/blog",
     Resume: "/resume",
+    Meta: "/meta",
     "Contact Me": "/contact-me",
   };
 

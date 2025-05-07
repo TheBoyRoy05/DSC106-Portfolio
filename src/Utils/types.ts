@@ -8,3 +8,19 @@ export type Project = {
   priorities?: unknown[];
   algorithms?: unknown[];
 }
+
+export type CommitData = d3.DSVParsedArray<{
+  commit: string;
+  file: string;
+  type: string;
+  line: number;
+  datetime: Date;
+}>;
+
+export type Commit = {
+  id: string;
+  datetime: Date;
+  totalLines: number;
+  hourFrac: number;
+  lines: CommitData;
+};

@@ -5,6 +5,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write  # Required for pushing code stats with GITHUB_TOKEN
+  pages: write
+  id-token: write
+
 jobs:
   build:
     name: Build
@@ -13,12 +18,28 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Required for pushing commits later
 
       - name: Setup Node
         uses: actions/setup-node@v4
 
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
+
+      - name: Run Elocuent
+        run: |
+          mkdir -p public
+          npx elocuent -d . -o public/loc.csv --ext js,jsx,ts,tsx,html,css
+
+      - name: Commit and Push LOC report
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git pull
+          git add -f public/loc.csv
+          git commit -m "Update code statistics" || echo "No changes to commit"
+          git push
 
       - name: Build project
         run: npm run build

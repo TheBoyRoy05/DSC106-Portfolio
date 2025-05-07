@@ -8,6 +8,7 @@ import YipYapPage from "./Components/Projects/YipYapPage";
 import SortingVizPage from "./Components/Projects/SortingVizPage";
 import ResumePage from "./Components/Other/ResumePage.tsx";
 import { useEffect } from "react";
+import MetaPage from "./Components/Meta/MetaPage.tsx";
 
 function App() {
   useEffect(() => {
@@ -31,6 +32,7 @@ function App() {
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact-me" element={<ContactMePage />} />
       <Route path="/resume" element={<ResumePage />} />
+      <Route path="/meta" element={<MetaPage />} />
       <Route path="/yipyap" element={<YipYapPage />} />
       <Route path="/sorting-visualizer" element={<SortingVizPage />} />
     </Routes>
