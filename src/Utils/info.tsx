@@ -48,6 +48,7 @@ import {
 } from "react-icons/si";
 
 import yipyap from "/src/Assets/Images/Projects/YipYap/YipYap.png";
+import bikeWatching from "/src/Assets/Images/Projects/BikeWatching.png";
 import sortingViz from "/src/Assets/Images/Projects/SortingVisualizer/SortingVisualizer.png";
 import boids from "/src/Assets/Images/Blog/Boids.gif";
 import wave from "/src/Assets/Images/Blog/WaveSimulation.png";
@@ -118,11 +119,12 @@ export const projects = [
     image: "",
   },
   {
-    name: "Atlas Framework",
-    year: 2024,
+    name: "Bike Watching",
+    year: 2025,
     description:
-      "Vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto.",
-    image: "",
+      "Ever wonder where and when people ride bikes in Boston? Yeah, me neither. But I made a website to track it.",
+    image: bikeWatching,
+    link: "https://theboyroy05.github.io/BikeWatching/"
   },
   {
     name: "YipYap",

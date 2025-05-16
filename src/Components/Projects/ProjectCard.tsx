@@ -20,7 +20,7 @@ const ProjectCard = ({ name, year, description, image, link, props }: ProjectPro
       <div className="glare w-1/3" />
       <div
         className={`w-full ~pt-2/6 ~px-2/6 pb-0 border border-[--border-color] rounded-2xl frame-bg group hover:cursor-pointer`}
-        onClick={link ? () => navigate(link) : undefined}
+        onClick={link ? link.includes("http") ? () => window.open(link, "_blank") : () => navigate(link) : undefined}
       >
         <div className="frame-content flex-col overflow-hidden">
           <div className="flex items-center justify-between ~text-lg/3xl font-bold text-white">
